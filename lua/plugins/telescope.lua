@@ -107,8 +107,28 @@ return {
       end
     end
 
+    local hl_bg = "#8b5cf6"
+    local hl_fg = "#faf5ff"
+
+    vim.api.nvim_set_hl(0, 'TelescopeSelection', { bg = hl_bg, fg = hl_fg })
+    -- telescope file matching styling
+    vim.api.nvim_set_hl(0, 'TelescopeMatching', { bg = hl_bg, fg = hl_fg })
+
+    -- telescope preview matching styling
+    vim.api.nvim_set_hl(0, 'TelescopePreviewLine', { bg = hl_bg, fg = hl_fg })
+
     return {
       defaults = {
+        layout_strategy = "vertical",
+        layout_config = {
+          vertical = {
+            width = 0.9,
+            height = 0.9,
+            preview_height = 0.5,
+          },
+        },
+        ignore_patterns = { "node_modules", ".git", "yarn.lock", "package-lock.json" },
+        path_display = { "truncate " },
         prompt_prefix = " ",
         selection_caret = " ",
         -- open files in the first window that is an actual file.
