@@ -170,6 +170,12 @@ return {
           hidden = true,
         },
       },
+      extensions = {
+        import = {
+          -- Imports can be added at a specified line whilst keeping the cursor in place
+          insert_at_top = true,
+        },
+      },
     }
   end,
 }

@@ -53,7 +53,6 @@ keymap.set("n", ";;", "<cmd>close<CR>", { desc = "Close pane" })
 
 -- generzal saving/closing keymaps
 keymap.set("n", ";j", "<cmd>w<CR>")
-keymap.set("n", ";a", "<cmd>wa<CR>")
 keymap.set("n", ";q", "<cmd>wqa<CR>")
 
 -- vim maximizer
