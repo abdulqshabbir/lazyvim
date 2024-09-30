@@ -6,18 +6,29 @@ return {
       theme = "dragon",
     },
     config = function()
-      require("kanagawa").setup({
+      local k = require("kanagawa")
+      k.setup({
         colors = {
           theme = {
+            dragon = {
+              ui = {
+                bg_visual = "#581c87",
+              },
+              diff = {
+                add = "#065f46",
+                delete = "#be123c",
+                change = "#92400e",
+              }
+            },
             all = {
               ui = {
-                bg_gutter = "none",
-              },
-            },
-          },
+                bg_gutter = "none"
+              }
+            }
+          }
         },
       })
-    end,
+    end
   },
   {
     "LazyVim/LazyVim",

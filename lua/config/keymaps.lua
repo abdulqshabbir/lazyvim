@@ -22,6 +22,17 @@ vim.keymap.set("n", "<leader>lg", function()
 end, { desc = "Lazygit (root dir)" })
 
 
+-- Telescope colors
+local hl_bg = "#8b5cf6"
+local hl_fg = "#faf5ff"
+vim.api.nvim_set_hl(0, 'TelescopeSelection', { bg = hl_bg, fg = hl_fg })
+vim.api.nvim_set_hl(0, 'TelescopeMatching', { bg = hl_bg, fg = hl_fg })
+vim.api.nvim_set_hl(0, 'TelescopePreviewLine', { bg = hl_bg, fg = hl_fg })
+
+-- search and replavim
+-- copy all contents of filevim
+keymap.set("n", "<leader>.", ":GrugFar<cr>")
+
 -- file explorer
 -- keymap.set("n", "<leader>b", "<cmd>Ex<CR>")
 
@@ -78,9 +89,9 @@ keymap.set("n", "<C-p>", ":cprev<CR>zz") -- jump to prev quickfix list item
 keymap.set("n", "<leader>fi", ":Telescope import<cr>")
 
 -- Snippets
-keymap.set({ "n", "v" }, "<leader>sa", ":ScissorsAddNewSnippet<cr>")
-keymap.set("n", "<leader>sc", ":ScissorsEditSnippet<cr>")
-keymap.set("n", "<leader>ss", ":ScissorsSave<cr>")
+-- keymap.set({ "n", "v" }, "<leader>sa", ":ScissorsAddNewSnippet<cr>")
+-- keymap.set("n", "<leader>sc", ":ScissorsEditSnippet<cr>")
+-- keymap.set("n", "<leader>ss", ":ScissorsSave<cr>")
 
 -- Oil
 keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
