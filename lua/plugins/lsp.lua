@@ -50,6 +50,11 @@ return {
         LazyVim.lsp.action["source.fixAll.ts"],
         desc = "Fix all diagnostics",
       },
+      {
+        "<leader>rn",
+        vim.lsp.buf.rename,
+        { noremap = true, silent = true },
+      },
     },
     opts = {
       servers = {
