@@ -55,15 +55,15 @@ return {
     { "<leader>sk", "<cmd>Telescope keymaps<cr>",                  desc = "Key Maps" },
     { "<leader>sm", "<cmd>Telescope marks<cr>",                    desc = "Jump to Mark" },
     { "<leader>sq", "<cmd>Telescope quickfix<cr>",                 desc = "Quickfix List" },
-    {
-      "<leader>ss",
-      function()
-        require("telescope.builtin").lsp_document_symbols({
-          symbols = LazyVim.config.get_kind_filter(),
-        })
-      end,
-      desc = "Goto Symbol",
-    },
+    -- {
+    --   "<leader>ss",
+    --   function()
+    --     require("telescope.builtin").lsp_document_symbols({
+    --       symbols = LazyVim.config.get_kind_filter(),
+    --     })
+    --   end,
+    --   desc = "Goto Symbol",
+    -- },
     {
       "<leader>sS",
       function()

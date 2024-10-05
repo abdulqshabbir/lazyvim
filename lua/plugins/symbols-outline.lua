@@ -16,6 +16,6 @@ return {
     },
   },
   keys = {
-    { "<leader>so", "<cmd>SymbolsOutline<CR>", { desc = "Open symbols map" } },
+    { "<leader>ss", "<cmd>SymbolsOutline<CR>", { desc = "Open symbols map" } },
   },
 }
