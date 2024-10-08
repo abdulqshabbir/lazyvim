@@ -21,13 +21,12 @@ vim.keymap.set("n", "<leader>lg", function()
   Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false, border = "none" })
 end, { desc = "Lazygit (root dir)" })
 
-
 -- Telescope colors
 local hl_bg = "#8b5cf6"
 local hl_fg = "#faf5ff"
-vim.api.nvim_set_hl(0, 'TelescopeSelection', { bg = hl_bg, fg = hl_fg })
-vim.api.nvim_set_hl(0, 'TelescopeMatching', { bg = hl_bg, fg = hl_fg })
-vim.api.nvim_set_hl(0, 'TelescopePreviewLine', { bg = hl_bg, fg = hl_fg })
+vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = hl_bg, fg = hl_fg })
+vim.api.nvim_set_hl(0, "TelescopeMatching", { bg = hl_bg, fg = hl_fg })
+vim.api.nvim_set_hl(0, "TelescopePreviewLine", { bg = hl_bg, fg = hl_fg })
 
 -- search and replavim
 -- copy all contents of filevim
@@ -56,9 +55,9 @@ keymap.set("n", "<leader>es", ":nohlsearch<CR>", { desc = "Clear search highligh
 
 -- window management
 keymap.set("n", "<leader>qq", "<cmd>q<CR>", { desc = "Quit current window" })
-keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })     -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })   -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })      -- make split windows equal width & height
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 keymap.set("n", ";;", "<cmd>close<CR>", { desc = "Close pane" })
 
@@ -67,7 +66,7 @@ keymap.set("n", ";j", "<cmd>w<CR>")
 keymap.set("n", ";q", "<cmd>wqa<CR>")
 
 -- vim maximizer
---keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
+keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
 -- Git Keymaps
 keymap.set("n", "<leader>gtb", "<cmd>Gitsigns blame_line<cr>")
@@ -104,3 +103,6 @@ keymap.set("n", "<leader>rn", ":IncRename ")
 
 -- barbeque
 keymap.set("n", "<leader>l", "<cmd>Barbecue toggle<CR>") -- toggle split window maximization
+
+-- copy paste file
+keymap.set("n", "<C-a>", "ggVGy")
